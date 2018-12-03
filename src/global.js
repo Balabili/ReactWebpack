@@ -3,7 +3,7 @@ export default {
   state: {
     count: 0,
   },
-  reducer: {
+  reducers: {
     add(state) {
       return {
         ...state,
