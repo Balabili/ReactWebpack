@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import dva from 'dva';
 import App from './App';
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'dva';
 import { Button, Form } from 'antd';
 import styles from './App.less';
-import image from './assets/aaa.png'
+import image from './assets/aaa.png';
 
 function App(props) {
   const [stateCount, setStateCount] = useState(0);
@@ -18,7 +18,7 @@ function App(props) {
       <br />
       <Button onClick={() => { dispatch({ type: 'demo/add' }); }} type="primary">redux+</Button>
       <br />
-      <img src={image} />
+      <img src={image} alt="" />
     </div>
   );
 }
