@@ -8,13 +8,13 @@
     "build": "webpack --config config/webpack.config.prod.js",
     "start": "node server.js",
     "precommit": "eslint --ext .js src",
-    "eslint": "eslint --ext .js src"
+    "lint": "eslint --ext .js src"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "author": "",
   "license": "MIT",
-  "pre-commit": [
-    "eslint"
-  ],
   "dependencies": {
     "antd": "^3.11.0",
     "dva": "^2.4.1",
