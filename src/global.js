@@ -1,14 +1,14 @@
+import { fromJS } from 'immutable';
+
 export default {
   namespace: 'demo',
-  state: {
+  state: fromJS({
     count: 0,
-  },
+  }),
   reducers: {
     add(state) {
-      return {
-        ...state,
-        count: state.count + 1,
-      };
+      return state
+        .set('count', state.get('count') + 1);
     },
   }
 }

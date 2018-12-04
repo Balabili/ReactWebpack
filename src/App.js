@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { connect } from 'dva';
 import { Button, Form } from 'antd';
 import styles from './App.less';
-import image from '../assets/aaa.png'
+import image from './assets/aaa.png'
 
 function App(props) {
   const [stateCount, setStateCount] = useState(0);
-  const { dispatch, demo: { count } } = props;
+  const { dispatch, demo } = props;
+  const count = demo.get('count');
 
   return (
     <div>
