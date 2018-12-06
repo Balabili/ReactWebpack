@@ -6,8 +6,13 @@ const base = require('./webpack.config.base');
 module.exports = merge(base, {
   mode: 'development',
   devtool: 'inline-source-map',
+  output: {
+    path: path.resolve(__dirname, '../dist'),
+    filename: '[name].[hash].js',
+    publicPath: '',
+  },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: {
     port: '8080',
@@ -18,6 +23,6 @@ module.exports = merge(base, {
     https: false,
     noInfo: true,
     open: true,
-    proxy: {}
-  }
+    proxy: {},
+  },
 });
