@@ -4,7 +4,19 @@ import App from './layouts/App';
 
 const { ConnectedRouter } = routerRedux;
 
-export default function ({ history }) {
+const routeConfigArray = [{
+  path: '/demo', model: ['demo'], component: () => import('./pages/Demo'),
+}];
+
+const registerModel = (app) => {
+  routeConfigArray.forEach((item) => {
+    // eslint-disable-next-line
+    item.model.forEach((model) => { app.model(require(`./model/${model}`).default); });
+  });
+};
+
+export default function ({ history, app }) {
+  registerModel(app);
   return (
     <ConnectedRouter history={history}>
       <Switch>

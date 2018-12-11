@@ -47,9 +47,10 @@ module.exports = {
       cacheGroups: {
         // 项目公共组件
         common: {
+          test: /components/,
           chunks: 'initial',
           name: 'common',
-          minChunks: 2,
+          minChunks: 1,
           maxInitialRequests: 5,
           minSize: 0,
         },

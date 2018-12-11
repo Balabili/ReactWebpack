@@ -7,7 +7,7 @@ const app = dva({ history: createHistory() });
 
 app.use(createLoading());
 
-app.model(require('./global').default);
+app.model(require('./model/global').default);
 
 app.router(router);
 

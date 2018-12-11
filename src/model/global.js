@@ -1,7 +1,7 @@
 import { fromJS } from 'immutable';
 
 export default {
-  namespace: 'demo',
+  namespace: 'global',
   state: fromJS({
     count: 0,
   }),
